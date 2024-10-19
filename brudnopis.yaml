@@ -3,6 +3,7 @@
 
 - hosts: asy    
   remote_user: ansible
+  gather_facts: False
 
   tasks:
     - name: Return ibmi_facts

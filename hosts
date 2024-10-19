@@ -13,3 +13,6 @@ ansible_user=ansible
 
 [asy]
 i75dev.sprint.local
+
+[asy:vars]
+absible_user=ansible
