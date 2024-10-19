@@ -13,8 +13,8 @@
           password: '{{ hmc_pass }}'
         system_name: "{{ my_power }}"
         vm_name: "{{ my_lpar_name }}"
-        min_proc_unit: 0.2
-        proc_unit: 0.2
+        min_proc_unit: 0.1
+        proc_unit: 0.1
         max_proc_unit: 1.0
         proc: 2         # Liczba procesorów wirtualnych, bo jest ustawione proc_unit.
         os_type: "ibmi"
