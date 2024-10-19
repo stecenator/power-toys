@@ -10,9 +10,9 @@
       ibm.power_ibmi.ibmi_fix_product_check:
         ptfs:
           - {
-            "product": "5770UME",
-            "ptf_id": "SI67856",
-            "release": "V1R4M0"
+            "product": "5770999",
+            "ptf_id": "MF70008",
+            "release": "V7R5M0"
             }
           - {
             "product": "5733SC1",
