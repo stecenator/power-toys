@@ -1,0 +1,26 @@
+---
+# Przykładowy playbook zbierający informacje o partycji IBM i
+
+- hosts: asy    
+  remote_user: ansible
+  gather_facts: False
+
+  tasks:
+    - name: Sprawdzanie fix'a
+      ibm.power_ibmi.ibmi_fix_product_check:
+        ptfs:
+          - {
+            "product": "5770UME",
+            "ptf_id": "SI67856",
+            "release": "V1R4M0"
+            }
+          - {
+            "product": "5733SC1",
+            "ptf_id": "SI73751",
+            "release": "V7R2M0"
+            }
+      register: output_list
+
+    - name: Wyświetlanie
+      debug: 
+        var: output_list
