@@ -1,0 +1,6 @@
+---
+# Zmienne globalne
+  hmc_user: ansible
+  # hmc_pass: wyniesione do secret.enc
+  hmc: hmcdelab.sprint.local    # FQDN konsoli HMC
+  my_power: DeLab-Server-9105   # NAzwa zarządzanego pudła
