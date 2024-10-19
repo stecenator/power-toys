@@ -1,0 +1,28 @@
+---
+# Przykładowy playbook zakładający LPAR przez moduł ibm.power_hmc
+
+- hosts: localhost    # Za wykonanie modułów ibm.power_hmc odpowiada stacja kontrolna
+  gather_facts: false # bo nie obchodzi mnie co wiem o localhost
+
+  tasks:
+    - name: Tworzenie LPARu
+      ibm.power_hmc.powervm_lpar_instance:
+        hmc_host: '{{ hmc }}'
+        hmc_auth:
+          username: '{{ hmc_user }}'
+          password: '{{ hmc_pass }}'
+        system_name: "{{ my_power }}"
+        vm_name: "{{ my_lpar_name }}"
+        min_proc_unit: 0.2
+        proc_unit: 0.2
+        max_proc_unit: 1.0
+        proc: 2         # Liczba procesorów wirtualnych, bo jest ustawione proc_unit.
+        os_type: "ibmi"
+        volume_config:
+          # - vios_name: "vios1"    # jak to widać na HMC, a nie hostname viosa
+          #   volume_name: "{{ my_hdisk }}"
+          - vios_name: "VIOS"       # Nazwa LPARu w HMC
+            volume_name: "{{ my_hdisk }}"
+        virt_network_config:
+          - network_name: "VLAN1-ETHERNET0"   # Byłoby ładniej jak by to była zmienna
+        state: present  
