@@ -6,8 +6,13 @@
   gather_facts: False
 
   tasks:
-    - name: Wyświetlanie profilu użytkownika
+    - name: Zbieranie profilu użytkownika
       ibm.power_ibmi.ibmi_user_and_group:
         operation: 'display'
         user: 'ansible'    
-      
+      register: prof
+
+  tasks:
+    - name: Wyświetlanie profilu użytkownika
+      debug:
+        var: prof
