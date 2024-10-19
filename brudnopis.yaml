@@ -11,4 +11,4 @@
       
     - name: Wyświetlenie informacji o mapowaniach
       debug:
-        var:  ansible_facts.mappings
+        var:  ansible_facts
