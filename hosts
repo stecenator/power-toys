@@ -1,12 +1,12 @@
 localhost
 i75dev.sprint.local
+viosdelab.sprint.local
 
 [ctrl]
 localhost
 
 [viosy]
-s824-6013-vios2.iic
-s824-6013-vios1.iic
+viosdelab.sprint.local
 
 [viosy:vars]
 ansible_user=ansible
@@ -16,3 +16,4 @@ i75dev.sprint.local
 
 [asy:vars]
 absible_user=ansible
+ansible_python_interpreter=/QOpenSys/pkgs/bin/python3
