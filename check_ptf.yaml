@@ -16,7 +16,7 @@
             }
           - {
             "product": "5733SC1",
-            "ptf_id": "SI73751",
+            "ptf_id": "SX73751",
             "release": "V7R2M0"
             }
       register: output_list
