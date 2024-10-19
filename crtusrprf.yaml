@@ -1,0 +1,13 @@
+---
+# Przykładowy playbook zbierający informacje o partycji IBM i
+
+- hosts: asy    
+  remote_user: ansible
+  gather_facts: False
+
+  tasks:
+    - name: Wyświetlanie profilu użytkownika
+      ibm.power_ibmi.ibmi_user_and_group:
+        operation: 'display'
+        user: 'ansible'    
+      
