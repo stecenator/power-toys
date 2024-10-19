@@ -12,7 +12,6 @@
         user: 'ansible'    
       register: prof
 
-  tasks:
     - name: Wyświetlanie profilu użytkownika
       debug:
         var: prof
