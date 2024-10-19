@@ -9,6 +9,6 @@
     - name: Return ibmi_facts
       ibm.power_ibmi.ibmi_facts:
       
-    - name: Wyświetlenie informacji o mapowaniach
+    - name: Fakty
       debug:
         var:  ansible_facts
