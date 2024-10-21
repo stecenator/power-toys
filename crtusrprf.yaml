@@ -8,8 +8,10 @@
   tasks:
     - name: Zbieranie profilu użytkownika
       ibm.power_ibmi.ibmi_user_and_group:
-        operation: 'display'
-        user: 'ansible'    
+        operation: 'create'
+        user: '{{ as_user }}'  
+        password: '{{ as_pass }}' 
+        user_class: "*USER"
       register: prof
 
     - name: Wyświetlanie profilu użytkownika

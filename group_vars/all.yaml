@@ -8,3 +8,7 @@
 # Wojny klonów
   my_lpar_name: i75DevClone
   my_hdisk: i75DevClone
+
+# Tworzenie profilu
+  as_user: marcinek
+  # as_pass w secret.enc
