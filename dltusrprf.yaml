@@ -1,0 +1,16 @@
+---
+# Przykładowy playbook usuwający profil użytkownika
+- hosts: asy    
+  remote_user: ansible
+  gather_facts: False
+
+  tasks:
+    - name: Usuwanie profilu użytkownika
+      ibm.power_ibmi.ibmi_user_and_group:
+        operation: 'delete'
+        user: '{{ as_user }}'  
+      register: prof
+
+    - name: Usuwanie profilu użytkownika
+      debug:
+        var: prof
