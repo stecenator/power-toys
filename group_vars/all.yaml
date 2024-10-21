@@ -1,0 +1,14 @@
+---
+# Zmienne globalne
+  hmc_user: ansible
+  # hmc_pass: wyniesione do secret.enc
+  hmc: hmcdelab.sprint.local    # FQDN konsoli HMC
+  my_power: DeLab-Server-9105   # NAzwa zarządzanego pudła
+
+# Wojny klonów
+  my_lpar_name: i75DevClone
+  my_hdisk: i75DevClone
+
+# Tworzenie profilu
+  as_user: marcinek
+  # as_pass w secret.enc

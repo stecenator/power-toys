@@ -1,0 +1,14 @@
+---
+# Przykładowy playbook zbierający informacje o partycji IBM i
+
+- hosts: asy    
+  remote_user: ansible
+  gather_facts: False
+
+  tasks:
+    - name: Return ibmi_facts
+      ibm.power_ibmi.ibmi_facts:
+      
+    - name: Fakty
+      debug:
+        var:  ansible_facts
