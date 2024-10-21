@@ -1,0 +1,16 @@
+---
+# Wykonywanie SELECT'a na Db2 for i
+
+- hosts: asy    
+  remote_user: ansible
+  gather_facts: False
+
+  tasks:
+    - name: Sprawdzanie fix'a
+      ibm.power_ibmi.ibmi_sql_query:
+	sql: 'select * from PILSISKO/Employee'
+      register: output_list
+
+    - name: Wyświetlanie
+      debug: 
+        var: output_list
