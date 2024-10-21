@@ -6,9 +6,9 @@
   gather_facts: False
 
   tasks:
-    - name: Sprawdzanie fix'a
+    - name: Wykonanie SQL 
       ibm.power_ibmi.ibmi_sql_query:
-	sql: 'select * from PILSISKO/Employee'
+         sql: 'select * from PILSISKO.Employee'
       register: output_list
 
     - name: Wyświetlanie
